@@ -18,28 +18,36 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-md-6">
             <div class="header-right-btn">
-            <?php if (is_user_logged_in()) : ?>
-    <div class="user-info">
-        <!-- Display Avatar -->
-        <div class="user-avatar">
-            <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
-        </div>
-        
-        <!-- Display Nickname -->
-        <div class="user-nickname">
-            <?php echo wp_get_current_user()->nickname; ?>
-        </div>
-    </div>
-<?php else : ?>
-    <div class="login-register-links">
-        <!-- Display Login and Registration links -->
-        <a href="<?php echo wp_login_url(); ?>">Login</a> | 
-        <a href="<?php echo wp_registration_url(); ?>">Register</a>
-    </div>
-<?php endif; ?>
-
+    <?php if (is_user_logged_in()) : ?>
+        <div class="user-info">
+            <!-- Display Avatar -->
+            <div class="user-avatar">
+                <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
             </div>
+            
+            <!-- Display Nickname -->
+            <div class="user-nickname">
+                <?php echo wp_get_current_user()->nickname; ?>
+            </div>
+        </div>
+
+        <!-- Display Logout Link -->
+        <div class="logout-link">
+            <a href="<?php echo wp_logout_url(); ?>">Logout</a>
+        </div>
+
+    <?php else : ?>
+        <div class="login-register-links">
+            <!-- Display Login and Registration links -->
+            <a href="<?php echo wp_login_url(); ?>">Login</a> | 
+            <a href="<?php echo wp_registration_url(); ?>">Register</a>
+        </div>
+    <?php endif; ?>
+</div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -48,7 +56,7 @@
     <div class="container">
         <div class="grid">
             <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/your-image.jpg" alt="Your Image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Your Image">
 
             </div>
             <div class="col-md-6">

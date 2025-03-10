@@ -58,3 +58,4 @@ function my_custom_theme_widgets_init() {
     ));
 }
 add_action('widgets_init', 'my_custom_theme_widgets_init');
+
