@@ -15,7 +15,8 @@ function my_custom_theme_setup() {
     // Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'my-custom-theme'),
-        'footer'  => __('Footer Menu', 'my-custom-theme'),
+        'footer-1'  => __('Footer 1', 'my-custom-theme'),
+        'footer-2'  => __('Footer 2', 'my-custom-theme'),
     ));
 
     // Enable support for HTML5 markup
