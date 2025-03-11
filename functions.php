@@ -59,3 +59,14 @@ function my_custom_theme_widgets_init() {
 }
 add_action('widgets_init', 'my_custom_theme_widgets_init');
 
+function set_post_views($postID) {
+    $count = get_post_meta($postID, 'post_views_count', true);
+    $count = $count ? $count + 1 : 1;
+    update_post_meta($postID, 'post_views_count', $count);
+}
+
+function track_post_views($post_id) {
+    if (!is_single()) return;
+    set_post_views(get_the_ID());
+}
+add_action('wp_head', 'track_post_views');
