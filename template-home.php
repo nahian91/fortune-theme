@@ -6,6 +6,112 @@ Template Name: Home
 
 get_header(); ?>
 
+<section class="banner-area" style="background-image: url('<?php echo get_template_directory_uri();?>/assets/img/bg.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bannerCarousel" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="5" aria-label="Slide 5"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="banner-content">
+                                        <span>MEGATON</span>
+                                        <h4>A powerful blend of vitamins, minerals, and natural extracts</h4>
+                                        <p>Megaton Tablet offers a potent blend of Inositol, Hyaluronic Acid, Natural Biotin, vitamins, and minerals to support overall health and vitality.</p>
+                                        <a href="">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="banner-img">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/megaton.png" class="" alt="...">
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <div class="banner-content">
+                                        <span>SUPERFLEX</span>
+                                        <h4>Support your joints and bones</h4>
+                                        <p>Megaton Tablet offers a potent blend of Inositol, Hyaluronic Acid, Natural Biotin, vitamins, and minerals to support overall health and vitality.</p>
+                                        <a href="">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="banner-img">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/superflex.png" class="" alt="...">
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="banner-content">
+                                        <span>BIMORE PLUS</span>
+                                        <h4>Strengthen your bones with premium calcium supplements</h4>
+                                        <p>Bimore Plus Tablets are a UK-formulated dietary supplement that supports healthy joints and connective tissues.</p>
+                                        <a href="">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="banner-img">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/biomore-plus.png" class="" alt="...">
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="banner-content">
+                                        <span>CALCIBONE</span>
+                                        <h4>Calcium-rich formula for stronger bones</h4>
+                                        <p>Calcibone Suspension is a UK-formulated dietary supplement that supports bone health for men and women. </p>
+                                        <a href="">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="banner-img">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/calcibone.png" class="" alt="...">
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="banner-content">
+                                        <span>PROCIVE ULTRA</span>
+                                        <h4>Boost your health with essential nutrients</h4>
+                                        <p>Procive Ultra is a UK-formulated food supplement that supports women’s reproductive health.</p>
+                                        <a href="">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="banner-img">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/procive-ultra.png" class="" alt="...">
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="features-area">
     <div class="container">
         <div class="row">
