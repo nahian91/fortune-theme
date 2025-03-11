@@ -1,7 +1,7 @@
-<footer class="footer-area">
+<footer class="footer-area" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/footer.jpg');">
     <div class="container">
-        <div class="grid">
-            <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-4">
                 <div class="single-footer">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Your Image">
                     <p>Fortune International’ has been promised to the stipulations of approachable and inclusive medical care.</p>
@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="single-footer">
                     <h4>Quick Links</h4>
                     <?php
@@ -28,7 +28,7 @@ wp_nav_menu( array(
                     <?php
 // The Query to get the latest post
 $args = array(
-    'posts_per_page' => 1,  // Only get the latest post
+    'posts_per_page' => 3,  // Only get the latest post
     'post_status'    => 'publish', // Only published posts
 );
 
@@ -38,25 +38,13 @@ $latest_post_query = new WP_Query( $args );
 if ( $latest_post_query->have_posts() ) : 
     while ( $latest_post_query->have_posts() ) : $latest_post_query->the_post();
 ?>
-    <div class="latest-post">
-        <!-- Display Post Title -->
-        <h2 class="latest-post-title">
+    <div class="footer-latest-post">
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('thumbnail');?>
+        </a>
+        <h4 class="footer-latest-post-title">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h2>
-        
-        <!-- Display Featured Image -->
-        <?php if ( has_post_thumbnail() ) : ?>
-            <div class="latest-post-image">
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('full'); // 'full' is the image size ?>
-                </a>
-            </div>
-        <?php endif; ?>
-
-        <!-- Display Excerpt or Content -->
-        <div class="latest-post-excerpt">
-            <?php the_excerpt(); ?>
-        </div>
+        </h4>
     </div>
 <?php
     endwhile;
@@ -89,9 +77,9 @@ endif;
     </div>
 </footer>
 
-<section class="footer-bottom">
+<section class="footer-bottom py-3">
     <div class="container">
-        <div class="grid">
+        <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="footer-copy">
                     <p>&copy; 2025. Developed by <a href="https://infinityflamesoft.com/" target="_blank">Infinity Flame Soft</a></p>

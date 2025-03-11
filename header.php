@@ -7,67 +7,69 @@
 <?php wp_head();?>
 <body <?php body_class();?>>
 
-<section class="header-area">
+<section class="header-top py-3">
     <div class="container">
-        <div class="grid">
+        <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="header-info">
                     <ul>
-                        <li><a href="tel: 01855444777">+8801855-444777</a></li>
-                        <li><a href="mailto: fortunesylhet@gmail.com">fortunesylhet@gmail.com</a></li>
+                        <li><a href="tel: 01855444777"><i class="fa-solid fa-phone"></i> +8801855-444777</a></li>
+                        <li><a href="mailto: fortunesylhet@gmail.com"><i class="fa-solid fa-envelope"></i> fortunesylhet@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6">
-            <div class="header-right-btn">
-    <?php if (is_user_logged_in()) : ?>
-        <div class="user-info">
-            <!-- Display Avatar -->
-            <div class="user-avatar">
-                <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
-            </div>
-            
-            <!-- Display Nickname -->
-            <div class="user-nickname">
-                <?php echo wp_get_current_user()->nickname; ?>
-            </div>
-        </div>
+                <div class="header-right-btn">
+                    <?php if (is_user_logged_in()) : ?>
+                    <div class="user-info">
+                        <!-- Display Avatar -->
+                        <div class="user-avatar">
+                            <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
+                        </div>
+                        
+                        <!-- Display Nickname -->
+                        <div class="user-nickname">
+                            <?php echo wp_get_current_user()->nickname; ?>
+                            <div class="logout-link">
+                                <a href="<?php echo wp_logout_url(); ?>">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    
 
-        <!-- Display Logout Link -->
-        <div class="logout-link">
-            <a href="<?php echo wp_logout_url(); ?>">Logout</a>
-        </div>
-
-    <?php else : ?>
-        <div class="login-register-links">
-            <!-- Display Login and Registration links -->
-            <a href="<?php echo wp_login_url(); ?>">Login</a> | 
-            <a href="<?php echo wp_registration_url(); ?>">Register</a>
-        </div>
-    <?php endif; ?>
-</div>
+            <?php else : ?>
+            <div class="login-register-links">
+                <!-- Display Login and Registration links -->
+                <a href="<?php echo wp_login_url(); ?>">Login</a> | 
+                <a href="<?php echo wp_registration_url(); ?>">Register</a>
+            </div>
+        <?php endif; ?>
+    </div>
             </div>
 
         </div>
     </div>
 </section>
 
-<header class="header-area">
+<header class="header-area py-3">
     <div class="container">
-        <div class="grid">
+        <div class="row align-items-center">
             <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Your Image">
-
+                <div class="logo">
+                    <a href="<?php echo site_url();?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
+                    </a>
+                </div>
             </div>
             <div class="col-md-6">
-            <?php
-wp_nav_menu( array(
-    'theme_location' => 'primary', // The menu location registered earlier
-    'container'       => 'nav',     // The HTML element to wrap the menu
-    'container_class' => 'primary-menu', // CSS class for the container
-    'menu_class'      => 'menu',   // CSS class for the <ul> element
-) );
-?>
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary', // The menu location registered earlier
+                        'container'       => 'nav',     // The HTML element to wrap the menu
+                        'container_class' => 'primary-menu', // CSS class for the container
+                        'menu_class'      => 'menu',   // CSS class for the <ul> element
+                    ) );
+                ?>
 
             </div>
             <div class="col-md-3">
@@ -84,7 +86,6 @@ $cart_total = $cart->get_cart_total(); // Total amount in the cart
         <span class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
         </span>
-        <span class="cart-quantity"> <?php echo $cart_count; ?> items</span>
         <span class="cart-total"> <?php echo $cart_total; ?></span>
     </a>
 </div>
