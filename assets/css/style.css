@@ -596,3 +596,27 @@ ul{
 .product-template-default .comments-section {
 	display: none;
 }
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+	width: 100%;
+}
+
+.woocommerce-cart-form table tr th {
+  color: #333;
+  font-family: "Open Sans";
+  font-weight: 600 !important;
+}
+.cart_totals h2 {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: "Open Sans";
+  margin-bottom: 25px;
+}
+.wc-proceed-to-checkout a {
+  background-color: #01091A !important;
+  text-transform: capitalize;
+  font-weight: 600 !important;
+  font-family: "Open Sans";
+  font-size: 18px !important;
+  margin-top: 15px !important;
+}

@@ -69,7 +69,6 @@
             <!-- Sidebar Area -->
             <div class="col-md-3">
                 <div class="blog-sidebar">
-
                     <!-- Popular Posts Widget -->
                     <div class="single-blog-sidebar popular-posts">
                         <h4>Popular Posts</h4>
