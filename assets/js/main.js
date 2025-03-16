@@ -8,4 +8,6 @@ jQuery(document).ready(function($) {
             header.removeClass('sticky');
         }
     });
+
+    $('#menu-main-menu').slicknav();
 });
