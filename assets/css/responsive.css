@@ -1,0 +1,19 @@
+@media only screen and (max-width: 767px) {
+
+    .header-info ul {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+.header-info ul li {
+    font-size: 14px;
+  }
+  .header-info ul li a {
+    font-weight: 500;
+  }
+  .header-right-btn {
+	justify-content: center;
+	margin-top: 15px;
+}
+
+}
