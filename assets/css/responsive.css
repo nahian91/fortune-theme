@@ -15,5 +15,11 @@
 	justify-content: center;
 	margin-top: 15px;
 }
+.slicknav_menu {
+	display: block;
+}
+.primary-menu {
+	display: none;
+}
 
 }
