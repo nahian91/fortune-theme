@@ -623,3 +623,6 @@ ul{
 .slicknav_menu {
 	display: none;
 }
+.mobile-header.header-area {
+	display: none;
+}
