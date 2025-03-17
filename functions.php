@@ -74,3 +74,28 @@ function track_post_views($post_id) {
     set_post_views(get_the_ID());
 }
 add_action('wp_head', 'track_post_views');
+
+
+add_action( 'woocommerce_before_checkout_form', function() {
+    echo '<div class="custom-checkout-layout"><div class="checkout-left">';
+}, 5 );
+
+add_action( 'woocommerce_checkout_after_customer_details', function() {
+    echo '</div><div class="checkout-right">';
+    
+    // Add "Your Order" title manually
+    echo '<h3 class="checkout-order-title">' . __('Your Order', 'woocommerce') . '</h3>';
+    
+    // Move order review to the right
+    do_action('woocommerce_checkout_order_review'); 
+    
+    echo '</div></div>';
+}, 20 );
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+add_filter( 'woocommerce_billing_fields', function( $fields ) {
+    unset( $fields['billing_country'] ); // Remove Country field
+    unset( $fields['billing_postcode'] ); // Remove Postcode / ZIP field
+    unset( $fields['billing_address_2'] ); // Remove Address Line 2 field
+    return $fields;
+} );
