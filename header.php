@@ -45,21 +45,23 @@
             </div>
             <div class="col-md-6">
                 <div class="header-right-btn">
-                    <?php if (is_user_logged_in()) : ?>
-                    <div class="user-info">
-                        <!-- Display Avatar -->
-                        <div class="user-avatar">
-                            <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
-                        </div>
-                        
-                        <!-- Display Nickname -->
-                        <div class="user-nickname">
-                            <?php echo wp_get_current_user()->nickname; ?>
-                            <div class="logout-link">
-                                <a href="<?php echo wp_logout_url(); ?>">Logout</a>
-                            </div>
-                        </div>
-                    </div>
+                <?php if (is_user_logged_in()) : ?>
+    <div class="user-info">
+        <!-- Display Avatar -->
+        <div class="user-avatar">
+            <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
+        </div>
+        
+        <!-- Display Nickname with Link to Profile -->
+        <div class="user-nickname">
+            <a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>">
+                <?php echo wp_get_current_user()->nickname; ?>
+            </a>
+            <div class="logout-link">
+                <a href="<?php echo wp_logout_url(); ?>">Logout</a>
+            </div>
+        </div>
+    </div>
                     
 
             <?php else : ?>

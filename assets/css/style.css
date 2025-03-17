@@ -57,6 +57,9 @@ ul{
 .user-nickname {
   font-weight: 600;
 }
+.user-nickname a{
+  color: #fff;
+}
 .logout-link a {
   color: #fff;
   font-size: 13px;
@@ -694,3 +697,4 @@ ul{
   font-weight: 500;
   margin-top: 15px;
 }
+
