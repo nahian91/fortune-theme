@@ -640,9 +640,6 @@ ul{
 
 .checkout-right {
   width: 38%;
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -662,4 +659,38 @@ ul{
 }
 #customer_details .col-1 {
 	width: 100%;
+}
+
+.woocommerce-billing-fields h3, .checkout-order-title {
+  font-family: "Open Sans";
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.woocommerce-billing-fields__field-wrapper label {
+  text-transform: capitalize;
+  font-family: "Open Sans";
+  font-weight: 500;
+}
+.woocommerce-billing-fields__field-wrapper input, .woocommerce-billing-fields__field-wrapper select {
+  width: 100%;
+  border: 1px solid #ddd !important;
+}
+#select2-billing_state-container {
+  border: 1px solid #ddd !important;
+  border: 0 !important;
+}
+.select2-selection.select2-selection--single {
+  border: 1px solid #ddd;
+}
+#add_payment_method #payment div.form-row, .woocommerce-cart #payment div.form-row, .woocommerce-checkout #payment div.form-row {
+	padding: 1em;
+	overflow: hidden;
+}
+#place_order {
+  background-color: #031b4e;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-top: 15px;
 }

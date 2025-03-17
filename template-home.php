@@ -27,7 +27,7 @@ get_header(); ?>
                                         <span>MEGATON</span>
                                         <h4>A powerful blend of vitamins, minerals, and natural extracts</h4>
                                         <p>Megaton Tablet offers a potent blend of Inositol, Hyaluronic Acid, Natural Biotin, vitamins, and minerals to support overall health and vitality.</p>
-                                        <a href="">View Details</a>
+                                        <a href="https://fortuneinternationalbd.com/product/megaton-super-multivitamin/">View Details</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -44,7 +44,7 @@ get_header(); ?>
                                         <span>SUPERFLEX</span>
                                         <h4>Support your joints and bones</h4>
                                         <p>Megaton Tablet offers a potent blend of Inositol, Hyaluronic Acid, Natural Biotin, vitamins, and minerals to support overall health and vitality.</p>
-                                        <a href="">View Details</a>
+                                        <a href="https://fortuneinternationalbd.com/product/super-flex/">View Details</a>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -61,7 +61,7 @@ get_header(); ?>
                                         <span>BIMORE PLUS</span>
                                         <h4>Strengthen your bones with premium calcium supplements</h4>
                                         <p>Bimore Plus Tablets are a UK-formulated dietary supplement that supports healthy joints and connective tissues.</p>
-                                        <a href="">View Details</a>
+                                        <a href="https://fortuneinternationalbd.com/product/bimore-plus/">View Details</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -78,7 +78,7 @@ get_header(); ?>
                                         <span>CALCIBONE</span>
                                         <h4>Calcium-rich formula for stronger bones</h4>
                                         <p>Calcibone Suspension is a UK-formulated dietary supplement that supports bone health for men and women. </p>
-                                        <a href="">View Details</a>
+                                        <a href="https://fortuneinternationalbd.com/product/calcibone/">View Details</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -95,7 +95,7 @@ get_header(); ?>
                                         <span>PROCIVE ULTRA</span>
                                         <h4>Boost your health with essential nutrients</h4>
                                         <p>Procive Ultra is a UK-formulated food supplement that supports women’s reproductive health.</p>
-                                        <a href="">View Details</a>
+                                        <a href="https://fortuneinternationalbd.com/product/procive-ultra/">View Details</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
