@@ -80,5 +80,8 @@
 .banner-img img {
   max-width: 200px;
 }
+.mobile-header.header-area {
+	display: block;
+}
 
 }
