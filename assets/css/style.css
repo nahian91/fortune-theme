@@ -698,3 +698,82 @@ ul{
   margin-top: 15px;
 }
 
+
+.product-template-default.single.single-product .col-md-3.no-sidebar {
+  display: none;
+}
+.product-template-default.single.single-product .col-md-9 {
+  width: 100%;
+}
+
+.summary.entry-summary h4.product-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Open Sans";
+}
+.summary.entry-summary p.price span {
+  color: #01091A;
+  font-size: 32px;
+  font-weight: 700;
+}
+.summary.entry-summary p.price {
+  margin-top: 25px;
+}
+.woocommerce-product-details__short-description {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 27px;
+}
+.single_add_to_cart_button.button.alt {
+  background-color: #01091A !important;
+  text-transform: capitalize;
+  padding: 15px 40px;
+  font-weight: 600;
+}
+.quantity input {
+  border: 1px solid #ddd !important;
+  padding: 10px;
+  margin-right: -5px;
+}
+.product_meta {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+.woocommerce-product-gallery__image.flex-active-slide {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+.flex-control-nav.flex-control-thumbs {
+  margin-top: 25px !important;
+}
+.woocommerce div.product div.images .flex-control-thumbs li {
+  border: 1px solid #ddd;
+  margin-right: 15px;
+}
+
+.related.products h2, .woocommerce-Tabs-panel h2 {
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: "Open Sans";
+  margin-bottom: 20px;
+}
+#tab-description {
+}
+.woocommerce-Tabs-panel h2 {
+}
+.tabs.wc-tabs {
+  padding-left: 0 !important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  background-color: #01091A;
+  color: #fff;
+  border-radius: 0;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+  font-weight: 600;
+  color: #333;
+  font-family: "Open Sans";
+}

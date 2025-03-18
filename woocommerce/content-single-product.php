@@ -7,8 +7,7 @@
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
  * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
+ * happen. When this occurs the version of the template file will be bumped and the readme will list any important changes.
  *
  * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
@@ -44,13 +43,15 @@ if ( post_password_required() ) {
 	?>
 
 	<div class="summary entry-summary">
+		<h4 class="product-title"><?php the_title(); ?></h4>
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
+		 * Change the priority to show title before price
 		 * @hooked woocommerce_template_single_title - 5
 		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
+		 * @hooked woocommerce_template_single_price - 15
 		 * @hooked woocommerce_template_single_excerpt - 20
 		 * @hooked woocommerce_template_single_add_to_cart - 30
 		 * @hooked woocommerce_template_single_meta - 40

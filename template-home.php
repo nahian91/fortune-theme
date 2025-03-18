@@ -181,7 +181,7 @@ get_header(); ?>
                             ?>
                         </div>
                         <div class="product-details">
-                            <h4 class="product-title"><a href="<?php the_permalink();?> ?>"><?php the_title(); ?></a></h4>
+                            <h4 class="product-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
                             <?php
                             global $product;
                             if ( $product ) {

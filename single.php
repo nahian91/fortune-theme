@@ -67,7 +67,7 @@
             </div>
 
             <!-- Sidebar Area -->
-            <div class="col-md-3">
+            <div class="col-md-3 no-sidebar">
                 <div class="blog-sidebar">
                     <!-- Popular Posts Widget -->
                     <div class="single-blog-sidebar popular-posts">

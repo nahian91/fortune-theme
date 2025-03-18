@@ -99,3 +99,4 @@ add_filter( 'woocommerce_billing_fields', function( $fields ) {
     unset( $fields['billing_address_2'] ); // Remove Address Line 2 field
     return $fields;
 } );
+
