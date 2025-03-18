@@ -100,3 +100,10 @@ add_filter( 'woocommerce_billing_fields', function( $fields ) {
     return $fields;
 } );
 
+// Change product image size on shop page
+function custom_woocommerce_thumbnail_size() {
+    add_filter( 'single_product_archive_thumbnail_size', function() {
+        return 'medium'; // 'medium' is the image size you want to use
+    });
+}
+add_action( 'wp', 'custom_woocommerce_thumbnail_size' );
