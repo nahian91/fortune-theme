@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,9 +8,10 @@
     --primary-color: #031b4e;
 }
 body{
-    font-family: "Open Sans";
+    font-family: "Anek Bangla", sans-serif;
     font-size: 16px;
     line-height: 25px;
+    font-weight: 400;
 }
 a{
     text-decoration: none;
