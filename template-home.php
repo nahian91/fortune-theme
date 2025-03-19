@@ -24,13 +24,13 @@ get_header(); ?>
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <div class="banner-content">
-                                        <span>MEGATON</span>
-                                        <h4>A powerful blend of vitamins, minerals, and natural extracts</h4>
-                                        <p>Megaton Tablet offers a potent blend of Inositol, Hyaluronic Acid, Natural Biotin, vitamins, and minerals to support overall health and vitality.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/megaton-super-multivitamin/">View Details</a>
+                                        <span>মেগাটন</span>
+                                        <h4>ভিটামিন, খনিজ ও প্রাকৃতিক উপাদানের দুর্দান্ত সমন্বয়।</h4>
+                                        <p>আপনার শরীরের প্রয়োজনীয় ভিটামিন, খনিজ এবং এমিনো অ্যাসিডের চাহিদা পূরণ করতে মেগাটন ট্যাবলেট হতে পারে প্রতিদিনের সঙ্গী।</p>
+                                        <a href="https://fortuneinternationalbd.com/product/megaton-super-multivitamin/">বিস্তারিত দেখুন</a>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <div class="banner-img">
                                         <img src="<?php echo get_template_directory_uri();?>/assets/img/megaton.png" class="" alt="...">
                                     </div>
@@ -39,15 +39,15 @@ get_header(); ?>
                         </div>
                         <div class="carousel-item">
                             <div class="row align-items-center">
-                                <div class="col-md-6 col-md-offset-3">
+                                <div class="col-md-8">
                                     <div class="banner-content">
-                                        <span>SUPERFLEX</span>
-                                        <h4>Support your joints and bones</h4>
-                                        <p>Megaton Tablet offers a potent blend of Inositol, Hyaluronic Acid, Natural Biotin, vitamins, and minerals to support overall health and vitality.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/super-flex/">View Details</a>
+                                        <span>সুপার ফ্লেক্স</span>
+                                        <h4>শারীরিক গতিশীলতা ও শরীরের বিভিন্ন জয়েন্টের ব্যথা নিরাময়ের জন্য সম্পূর্ণ সমাধান!</h4>
+                                        <p>আপনার জয়েন্টের ব্যথা নিরাময়ের জন্য সুপার ফ্লেক্স ট্যাবলেট হতে পারে সেরা পছন্দ। এটি জয়েন্টের ব্যথা, হাড়ের ক্ষয় এবং গতিশীলতা বৃদ্ধিতে কার্যকর।</p>
+                                        <a href="https://fortuneinternationalbd.com/product/super-flex/">বিস্তারিত দেখুন</a>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <div class="banner-img">
                                         <img src="<?php echo get_template_directory_uri();?>/assets/img/superflex.png" class="" alt="...">
                                     </div>
@@ -58,13 +58,13 @@ get_header(); ?>
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <div class="banner-content">
-                                        <span>BIMORE PLUS</span>
-                                        <h4>Strengthen your bones with premium calcium supplements</h4>
-                                        <p>Bimore Plus Tablets are a UK-formulated dietary supplement that supports healthy joints and connective tissues.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/bimore-plus/">View Details</a>
+                                        <span>বায়োমোর প্লাস</span>
+                                        <h4>হাড় এবং শারীরিক স্বাস্থ্যের জন্য একটি পূর্ণাঙ্গ সমাধান!</h4>
+                                        <p>এটি ক্যালসিয়াম, ম্যাগনেসিয়াম, ভিটামিন ও অন্যান্য প্রয়োজনীয় উপাদান দেহের বিভিন্ন অঙ্গে সরবরাহ করে, যা সুস্থ ও স্বাভাবিক জীবনযাত্রার জন্য অত্যন্ত গুরুত্বপূর্ণ।</p>
+                                        <a href="https://fortuneinternationalbd.com/product/bimore-plus/">বিস্তারিত দেখুন</a>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <div class="banner-img">
                                         <img src="<?php echo get_template_directory_uri();?>/assets/img/biomore-plus.png" class="" alt="...">
                                     </div>
@@ -76,12 +76,12 @@ get_header(); ?>
                                 <div class="col-md-8">
                                     <div class="banner-content">
                                         <span>CALCIBONE</span>
-                                        <h4>Calcium-rich formula for stronger bones</h4>
-                                        <p>Calcibone Suspension is a UK-formulated dietary supplement that supports bone health for men and women. </p>
-                                        <a href="https://fortuneinternationalbd.com/product/calcibone/">View Details</a>
+                                        <h4>শক্তিশালী হাড় ও দাঁত বজায় রাখার জন্য একটি সম্পূর্ণ ও কার্যকরী সমাধান</h4>
+                                        <p>আপনার হাড় ও দাঁতের গঠন মজবুত করতে এবং Osteoporosis (হাড়ের ক্ষয়) প্রতিরোধে এখনই গ্রহণ করুন Calcibone Suspension! </p>
+                                        <a href="https://fortuneinternationalbd.com/product/calcibone/">বিস্তারিত দেখুন</a>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <div class="banner-img">
                                         <img src="<?php echo get_template_directory_uri();?>/assets/img/calcibone.png" class="" alt="...">
                                     </div>
@@ -92,13 +92,13 @@ get_header(); ?>
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <div class="banner-content">
-                                        <span>PROCIVE ULTRA</span>
-                                        <h4>Boost your health with essential nutrients</h4>
-                                        <p>Procive Ultra is a UK-formulated food supplement that supports women’s reproductive health.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/procive-ultra/">View Details</a>
+                                        <span>প্রোসিভ আলট্রা</span>
+                                        <h4>PCOS/PCOD-এর চিকিৎসার জন্য একটি সম্পূর্ণ ও কার্যকরী সমাধান, যা আপনার সুস্থতা নিশ্চিত করবে!</h4>
+                                        <p>আপনার প্রজনন স্বাস্থ্যের যত্নে, ডিম্বাণুর গুণগত মান বৃদ্ধি, এবং হরমোনের ভারসাম্য বজায় রাখতে এটি কার্যকর।</p>
+                                        <a href="https://fortuneinternationalbd.com/product/procive-ultra/">বিস্তারিত দেখুন</a>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <div class="banner-img">
                                         <img src="<?php echo get_template_directory_uri();?>/assets/img/procive-ultra.png" class="" alt="...">
                                     </div>
@@ -118,29 +118,29 @@ get_header(); ?>
             <div class="col-md-3">
                 <div class="single-feature">
                     <i class="fa-solid fa-truck"></i>
-                    <h4>Local Shipping</h4>
-                    <p>We offer fast local shipping, ensuring your medical products arrive safely at your doorstep.</p>
+                    <h4>দ্রুত ডেলিভারি</h4>
+                    <p>আমরা দ্রুত এবং নির্ভরযোগ্য স্থানীয় শিপিং সেবা সরবরাহ করি, যাতে আপনার স্বাস্থ্য পণ্যগুলি নিরাপদে এবং দ্রুত সময়ে আপনার দোরগোড়ায় পৌঁছায়।</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="single-feature">
                     <i class="fa-solid fa-bag-shopping"></i>
-                    <h4>Best Quality</h4>
-                    <p>Our medical products are crafted to the highest standards, ensuring quality and meeting your health.</p>
+                    <h4>সেরা মান</h4>
+                    <p>আমাদের স্বাস্থ্য পণ্যগুলি অত্যন্ত যত্ন এবং নিখুঁতভাবে তৈরি, যা স্বাস্থ্য সুরক্ষায় সর্বোচ্চ মানের পরিসরে আসে, আপনার সুস্থতা নিশ্চিত করার জন্য।</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="single-feature">
                     <i class="fa-solid fa-mug-hot"></i>
-                    <h4>Best Offers</h4>
-                    <p>Enjoy exclusive offers on premium medical products, delivering the best value for your health and wellness.</p>
+                    <h4>সেরা অফার</h4>
+                    <p>আমাদের এক্সক্লুসিভ অফারগুলো থেকে উপকার নিন, যেখানে আপনি শীর্ষস্থানীয় স্বাস্থ্য পণ্যসমূহ লাভ করতে পারবেন সর্বোত্তম মূল্য ও সুবিধায়।</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="single-feature">
                     <i class="fa-solid fa-money-bill"></i>
-                    <h4>Secure Payments</h4>
-                    <p>Shop confidently with our secure payment gateway, protecting your payment information to the top.</p>
+                    <h4>নিরাপদ পেমেন্ট</h4>
+                    <p>আমাদের নিরাপদ পেমেন্ট সিস্টেমের মাধ্যমে আপনি নিশ্চিন্তে অনলাইন কেনাকাটা করতে পারবেন, যেখানে আপনার ব্যক্তিগত এবং পেমেন্ট তথ্য সর্বোচ্চ নিরাপত্তায় সুরক্ষিত থাকবে।</p>
                 </div>
             </div>
         </div>
@@ -152,8 +152,8 @@ get_header(); ?>
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h4>Exclusive Products</h4>
-                    <p>Explore the benefits of choosing our exclusive medical products, crafted to meet <br> the highest standards of quality and designed to support your health.</p>
+                    <h4>আপনার পণ্যসমূহ</h4>
+                    <p>আমাদের এক্সক্লুসিভ মেডিকেল পণ্যসমূহ নির্বাচন করার সুবিধাগুলি জানুন, যা সর্বোচ্চ মানের মানদণ্ডে তৈরি এবং আপনার স্বাস্থ্যকে উন্নত করতে সহায়ক।</p>
                 </div>
             </div>
         </div>
@@ -211,8 +211,8 @@ get_header(); ?>
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h4>Latest Blogs</h4>
-                    <p>Explore the benefits of choosing our exclusive medical products, crafted to <br>meet the highest standards of quality and designed to support your health.</p>
+                    <h4>সর্বশেষ ব্লগ</h4>
+                    <p>আমাদের ব্লগে পাবেন বিভিন্ন স্বাস্থ্য টিপস ও ট্রিকস, যা আপনার দৈনন্দিন জীবনে স্বাস্থ্যসম্মত অভ্যাস গড়ে তুলতে সাহায্য করবে। <br/> স্বাস্থ্য সুরক্ষায় সহায়ক সহজ উপায়, পুষ্টির গুরুত্ব, এবং শরীর-মন ভালো রাখতে প্রয়োজনীয় পরামর্শ এখানে তুলে ধরা হবে।</p>
                 </div>
             </div>
         </div>
