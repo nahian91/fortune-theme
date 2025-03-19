@@ -21,57 +21,92 @@
         <div class="row">
             <!-- Main Post Content -->
             <div class="col-md-9">
-                <?php
-                    if (have_posts()) :
-                        while (have_posts()) : the_post();
-                            ?>
-                            <!-- Display Post Content -->
-                            <article <?php post_class(); ?>>
-                                <?php the_content(); ?>
-                            </article>
-                        <?php
-                        endwhile;
-                    endif;
-                ?>
-                
-                <!-- Display Comments Section -->
-                <div class="comments-section">
-                    <?php
-                    // Check if comments are open or there are comments
-                    if (comments_open() || get_comments_number()) :
-                        ?>
-                        <h4>Comments</h4>
-                        <ul class="comments-list">
-                            <?php
-                            // Display comments
-                            wp_list_comments([
-                                'style' => 'ul',
-                                'short_ping' => true,
-                                'avatar_size' => 50,
-                            ]);
-                            ?>
-                        </ul>
-
-                        <!-- Comment Form -->
-                        <div class="comment-form">
-                            <?php
-                            // Display comment form
-                            comment_form([
-                                'title_reply' => 'Leave a Comment',
-                                'label_submit' => 'Submit Comment',
-                            ]);
-                            ?>
-                        </div>
-                    <?php endif; ?>
+                <div class="single-post-thumbnail">
+                    <?php the_post_thumbnail('full'); ?>
                 </div>
+                <div class="single-post-meta">
+                    <span><i class="fa-solid fa-table"></i> বিভাগ: <?php the_category(', '); ?></span>
+                    <span><i class="fa-solid fa-calendar-days"></i> তারিখ: <?php the_time('F j, Y'); ?></span>
+                    <span><i class="fa-solid fa-eye"></i> <?php echo get_post_meta(get_the_ID(), 'post_views_count', true) . ' বার দেখা হয়েছে'; ?></span>
+                </div>
+
+                <?php
+                the_content();
+                    
+                ?>
+
+                <div class="social-share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="facebook-share" title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i> Share
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" class="twitter-share" title="Share on Twitter">
+                        <i class="fab fa-twitter"></i> Tweet
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=<?php the_title(); ?>%20<?php the_permalink(); ?>" target="_blank" class="whatsapp-share" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp"></i> Share
+                    </a>
+                </div>
+                <?php
+    // Get the current post's categories
+    $categories = get_the_category();
+    if ($categories) {
+        $category_ids = array();
+        foreach ($categories as $category) {
+            $category_ids[] = $category->term_id;
+        }
+
+        // Set up the query arguments to get related posts by category
+        $args = array(
+            'category__in'   => $category_ids, // Posts in the same categories
+            'post__not_in'   => array(get_the_ID()), // Exclude the current post
+            'posts_per_page' => 3, // Number of related posts to show
+            'orderby'        => 'rand', // Random order for diversity
+        );
+
+        // Create a new query for related posts
+        $related_posts = new WP_Query($args);
+
+        if ($related_posts->have_posts()) {
+            echo '<div class="related-posts"><h3>সম্পর্কিত পোস্টসমূহ</h3>';
+            echo '<div class="row">'; // Start the row for grid layout
+
+            while ($related_posts->have_posts()) {
+                $related_posts->the_post();
+                ?>
+                <div class="col-md-4">
+                    <div class="single-blog">
+                        <?php the_post_thumbnail();?>
+                        <div class="blog-grid-content">
+                            <div class="blog-grid-meta">
+                                <span><?php echo get_the_date('F j, Y');;?></span>
+                                <span><?php the_category(); ?></span>
+                            </div>
+                            <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+                            <?php the_excerpt();?>
+                            <a href="<?php the_permalink();?>">আরও পড়ুন</a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+
+            echo '</div>'; // End the row
+            echo '</div>'; // End the related-posts div
+        }
+
+        // Reset post data after custom query
+        wp_reset_postdata();
+    }
+?>
+
             </div>
 
             <!-- Sidebar Area -->
             <div class="col-md-3 no-sidebar">
                 <div class="blog-sidebar">
-                    <!-- Popular Posts Widget -->
+                    <!-- জনপ্রিয় পোস্টসমূহ Widget -->
                     <div class="single-blog-sidebar popular-posts">
-                        <h4>Popular Posts</h4>
+                        <h4>জনপ্রিয় পোস্টসমূহ</h4>
                         <ul>
                             <?php
                             // Popular posts query
@@ -95,9 +130,9 @@
                         </ul>
                     </div>
 
-                    <!-- Categories Widget -->
+                    <!-- বিভাগসমূহ Widget -->
                     <div class="single-blog-sidebar">
-                        <h4>Categories</h4>
+                        <h4>বিভাগসমূহ</h4>
                         <ul>
                             <?php
                             // Display categories
