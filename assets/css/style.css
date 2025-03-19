@@ -42,10 +42,14 @@ ul{
   font-weight: 500;
 }
 .header-right-btn {
-  display: flex;
-  justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 30px;
 }
-
+.gtranslate_wrapper a {
+	margin-left: 10px;
+}
 .user-info {
   display: flex;
   align-items: center;

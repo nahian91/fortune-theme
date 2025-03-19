@@ -40,7 +40,7 @@
                                         <span><?php echo get_the_date('F j, Y');;?></span>
                                         <span><?php the_category(); ?></span>
                                     </div>
-                                    <h4><?php the_title();?></h4>
+                                    <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
                                     <?php the_excerpt();?>
                                     <a href="<?php the_permalink();?>">Read More</a>
                                 </div>
