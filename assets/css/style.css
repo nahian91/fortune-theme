@@ -906,3 +906,19 @@ ul{
   font-weight: 600;
   margin-bottom: 20px;
 }
+
+.wp-block-list {
+  list-style: disc;
+  padding-left: 15px;
+}
+.wp-block-list li {
+  margin-bottom: 15px;
+}
+.wp-block-list li:last-child {
+  margin-bottom: 0;
+}
+.wp-block-heading {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
+}
