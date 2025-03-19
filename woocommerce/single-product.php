@@ -21,7 +21,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
-	<?php
+
+<section class="breadcumb-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/footer.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4><?php the_title();?></h4>
+                    <ul>
+                        <li><a href="<?php echo site_url();?>">Home</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i></li>
+                        <li><?php the_title();?></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			<?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
@@ -46,15 +64,9 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
+			</div>
+		</div>
+	</div>
 
 <?php
 get_footer( 'shop' );

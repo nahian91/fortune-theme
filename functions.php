@@ -12,6 +12,8 @@ function my_custom_theme_setup() {
     // Enable support for post thumbnails
     add_theme_support('post-thumbnails');
 
+    add_theme_support('woocommerce');
+
     // Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'my-custom-theme'),
