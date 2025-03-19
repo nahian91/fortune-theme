@@ -22,7 +22,7 @@
             <!-- Main Post Content -->
             <div class="col-md-9">
                 <div class="single-post-thumbnail">
-                    <?php the_post_thumbnail('full'); ?>
+                    <?php the_post_thumbnail('medium'); ?>
                 </div>
                 <div class="single-post-meta">
                     <span><i class="fa-solid fa-table"></i> বিভাগ: <?php the_category(', '); ?></span>
