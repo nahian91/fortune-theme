@@ -922,3 +922,12 @@ ul{
   font-size: 28px;
   line-height: 37px;
 }
+.woocommerce-products-header {
+  margin-top: 50px;
+}
+.woocommerce-pagination {
+  margin-bottom: 50px;
+}
+.woocommerce-breadcrumb {
+	display: none;
+}
