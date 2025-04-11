@@ -25,9 +25,9 @@
                     <?php the_post_thumbnail('medium'); ?>
                 </div>
                 <div class="single-post-meta">
-                    <span><i class="fa-solid fa-table"></i> বিভাগ: <?php the_category(', '); ?></span>
-                    <span><i class="fa-solid fa-calendar-days"></i> তারিখ: <?php the_time('F j, Y'); ?></span>
-                    <span><i class="fa-solid fa-eye"></i> <?php echo get_post_meta(get_the_ID(), 'post_views_count', true) . ' বার দেখা হয়েছে'; ?></span>
+                    <span><i class="fa-solid fa-table"></i> Categories: <?php the_category(', '); ?></span>
+                    <span><i class="fa-solid fa-calendar-days"></i> Date: <?php the_time('F j, Y'); ?></span>
+                    <span><i class="fa-solid fa-eye"></i> <?php echo get_post_meta(get_the_ID(), 'post_views_count', true) . ' Vuews'; ?></span>
                 </div>
 
                 <?php
@@ -67,7 +67,7 @@
         $related_posts = new WP_Query($args);
 
         if ($related_posts->have_posts()) {
-            echo '<div class="related-posts"><h3>সম্পর্কিত পোস্টসমূহ</h3>';
+            echo '<div class="related-posts"><h3>Related Posts</h3>';
             echo '<div class="row">'; // Start the row for grid layout
 
             while ($related_posts->have_posts()) {
@@ -83,7 +83,7 @@
                             </div>
                             <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
                             <?php the_excerpt();?>
-                            <a href="<?php the_permalink();?>">আরও পড়ুন</a>
+                            <a href="<?php the_permalink();?>">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                 <div class="blog-sidebar">
                     <!-- জনপ্রিয় পোস্টসমূহ Widget -->
                     <div class="single-blog-sidebar popular-posts">
-                        <h4>জনপ্রিয় পোস্টসমূহ</h4>
+                        <h4>Popular Posts</h4>
                         <ul>
                             <?php
                             // Popular posts query
@@ -132,7 +132,7 @@
 
                     <!-- বিভাগসমূহ Widget -->
                     <div class="single-blog-sidebar">
-                        <h4>বিভাগসমূহ</h4>
+                        <h4>Categories</h4>
                         <ul>
                             <?php
                             // Display categories
