@@ -42,7 +42,7 @@
                                     </div>
                                     <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
                                     <?php the_excerpt();?>
-                                    <a href="<?php the_permalink();?>">আরও পড়ুন</a>
+                                    <a href="<?php the_permalink();?>">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
             <div class="col-md-3">
                 <div class="blog-sidebar">
                     <div class="single-blog-sidebar popular-posts">
-                        <h4>জনপ্রিয় পোস্টসমূহ</h4>
+                        <h4>Popular Posts</h4>
                         <ul>
                             <?php
                             $popular_posts = new WP_Query([
@@ -81,7 +81,7 @@
                         </ul>
                     </div>
                     <div class="single-blog-sidebar">
-                        <h4>বিভাগসমূহ</h4>
+                        <h4>Categories</h4>
                         <ul>
                             <?php
                             wp_list_categories([
