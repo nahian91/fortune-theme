@@ -7,116 +7,84 @@
 <?php wp_head();?>
 <body <?php body_class();?>>
 
-<section class="mobile-header header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="logo">
-                    <a href="<?php echo site_url();?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'primary', // The menu location registered earlier
-                        'container'       => 'nav',     // The HTML element to wrap the menu
-                        'container_class' => 'primary-menu', // CSS class for the container
-                        'menu_class'      => 'menu',   // CSS class for the <ul> element
-                    ) );
-                ?>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="header-top py-3">
+<section class="header-top">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="header-info">
-                    <ul>
-                        <li><a href="tel: 01855444777"><i class="fa-solid fa-phone"></i> +8801855-444777</a></li>
-                        <li><a href="mailto: fortunesylhet@gmail.com"><i class="fa-solid fa-envelope"></i> fortunesylhet@gmail.com</a></li>
-                    </ul>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="header-contact">
+                    <a href="tel:+8801855444999"><i class="fa-solid fa-phone"></i> +880 1855-444999</a>
+                    <a href="mailto:fortunesylhet@gmail.com"><i class="fa-solid fa-envelope"></i> fortunesylhet@gmail.com</a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="header-right-btn">
-                <?php if (is_user_logged_in()) : ?>
-                    <div class="user-info">
-                        <!-- Display Avatar -->
-                        <div class="user-avatar">
-                            <?php echo get_avatar(get_current_user_id(), 96); // 96 is the size of the avatar ?>
-                        </div>
-                        
-                        <!-- Display Nickname with Link to Profile -->
-                        <div class="user-nickname">
-                            <a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>">
-                                <?php echo wp_get_current_user()->nickname; ?>
-                            </a>
-                            <div class="logout-link">
-                                <a href="<?php echo wp_logout_url(); ?>">Logout</a>
+            <div class="col-lg-6 col-12">
+                <div class="header-top-right">
+                    <div class="auth-box">
+                        <?php if (is_user_logged_in()) : 
+                            $current_user = wp_get_current_user(); ?>
+                            <div class="user-logged">
+                                <?php echo get_avatar($current_user->ID, 24); ?>
+                                <a href="<?php echo wc_get_page_permalink('myaccount'); ?>">
+                                    Account
+                                </a>
+                                <span class="sep">|</span>
+                                <a href="<?php echo wp_logout_url(home_url()); ?>" class="logout-link">Logout</a>
                             </div>
-                        </div>
-                    </div>                   
-
-            <?php else : ?>
-            <div class="login-register-links">
-                <!-- Display Login and Registration links -->
-                <a href="<?php echo wp_login_url(); ?>">Login</a> | 
-                <a href="<?php echo wp_registration_url(); ?>">Register</a>
+                        <?php else : ?>
+                            <div class="user-guest">
+                                <a href="<?php echo wp_login_url(); ?>"><i class="fa-solid fa-circle-user"></i> Login</a>
+                                <a href="<?php echo wp_registration_url(); ?>">Register</a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <div class="lang-box">
+                        <?php echo do_shortcode('[gtranslate]'); ?>
+                    </div>
+                </div>
             </div>
-        <?php endif; ?>
-        <?php echo do_shortcode('[gtranslate]'); ?>
-    </div>
-            </div>
-
         </div>
     </div>
 </section>
 
-<header class="header-area py-3">
+<header class="main-header sticky-top">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-3">
+            <div class="col-lg-3 col-8">
                 <div class="logo">
-                    <a href="<?php echo site_url();?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
+                    <a href="<?php echo site_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-lg-6 d-none d-lg-block">
                 <?php
                     wp_nav_menu( array(
-                        'theme_location' => 'primary', // The menu location registered earlier
-                        'container'       => 'nav',     // The HTML element to wrap the menu
-                        'container_class' => 'primary-menu', // CSS class for the container
-                        'menu_class'      => 'menu',   // CSS class for the <ul> element
+                        'theme_location' => 'primary',
+                        'container'      => 'nav',
+                        'container_class' => 'primary-nav',
+                        'menu_class'      => 'nav-menu-list',
                     ) );
                 ?>
-
             </div>
-            <div class="col-md-3">
-            <?php
-// Get the current WooCommerce cart
-$cart = WC()->cart;
-$cart_count = $cart->get_cart_contents_count(); // Number of items in the cart
-$cart_total = $cart->get_cart_total(); // Total amount in the cart
-?>
 
-<div class="cart-button">
-    <a href="<?php echo wc_get_cart_url(); ?>" class="cart-link">
-        <!-- Font Awesome Cart Icon -->
-        <span class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-        </span>
-        <span class="cart-total"> <?php echo $cart_total; ?></span>
-    </a>
-</div>
+            <div class="col-lg-3 col-4">
+                <div class="header-actions">
+                    <?php if ( class_exists( 'WooCommerce' ) ) : 
+                        $count = WC()->cart->get_cart_contents_count();
+                    ?>
+                    <div class="mini-cart">
+                        <a href="<?php echo wc_get_cart_url(); ?>" class="cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-badge"><?php echo $count; ?></span>
+                            <span class="cart-price d-none d-xl-inline"><?php echo WC()->cart->get_cart_total(); ?></span>
+                        </a>
+                    </div>
+                    <?php endif; ?>
 
+                    <button class="mobile-menu-toggle d-lg-none" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

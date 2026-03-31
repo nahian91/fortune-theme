@@ -388,19 +388,95 @@ ul{
   background-color: #f4f4f4;
   padding: 80px 0;
 }
+
+/* Container Spacing */
+.section-container {
+    padding: 100px 0 50px;
+    text-align: center;
+}
+
 .section-title {
-  text-align: center;
-  margin-bottom: 60px;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+/* 1. The Badge with Animation */
+.sub-badge-wrapper {
+    margin-bottom: 25px;
+}
+
+.sub-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1); /* Light Blue Tint */
+    color: #3b82f6; /* Solid Blue */
+    padding: 5px 15px;
+    border-radius: 6px; /* Slightly sharper, modern corners */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Subtle Badge Animation (Soft Pulse) */
+.animate-badge {
+    animation: badge-float 3s ease-in-out infinite;
+}
+
+@keyframes badge-float {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(59, 130, 246, 0);
+    }
+    50% {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+    }
+}
+
+/* 2. The Heading (Solid High Contrast) */
 .section-title h4 {
-  font-size: 40px;
-  line-height: 40px;
-  color: #031b4e;
-  font-weight: 600;
-  margin-bottom: 15px;
+    font-size: 44px;
+    line-height: 1.1;
+    color: #031b4e;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
+
+.section-title h4 span {
+    color: #ef4444; /* Solid Brand Red for emphasis */
+}
+
+/* 3. The Solid Divider */
+.title-divider {
+    width: 50px;
+    height: 3px;
+    background: #3b82f6; /* Solid Primary Blue */
+    margin: 0 auto 30px;
+    border-radius: 2px;
+}
+
+/* 4. The Typography */
 .section-title p {
-  font-weight: 500;
+    font-size: 18px;
+    color: #475569; /* Professional Slate Grey */
+    line-height: 1.7;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .section-title h4 {
+        font-size: 34px;
+    }
+    .section-title p {
+        font-size: 16px;
+    }
+    .section-title p br {
+        display: none;
+    }
 }
 
 .products-home-area {
@@ -458,118 +534,6 @@ ul{
   font-size: 22px;
   margin-top: 20px;
   margin-bottom: 15px;
-}
-
-/* Footer */
-.footer-area {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 2;
-    padding: 60px 0;
-    color: #fff;
-  }
-  .footer-area:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #02060E;
-    left: 0;
-    top: 0;
-    opacity: .98;
-    z-index: -1;
-  }
-  .single-footer img {
-    max-width: 130px;
-  }
-  .single-footer p {
-    margin: 20px 0;
-  }
-  .footer-social a {
-    color: #fff;
-  }
-  .footer-social {
-    display: flex;
-    gap: 25px;
-  }
-  .single-footer > h4 {
-    font-size: 22px;
-    margin-bottom: 30px;
-  }
-  .footer-single-contact {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  .footer-single-contact:last-child {
-    margin-bottom: 0;
-  }
-  .footer-single-contact h4 {
-    text-transform: uppercase;
-    font-size: 18px;
-  }
-  .footer-single-contact h4 span {
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: initial;
-    margin-top: 5px;
-  }
-  .single-footer .menu ul li a {
-    color: #fff;
-    text-transform: capitalize;
-    font-weight: 500;
-    margin-bottom: 5px;
-    display: block;
-    font-size: 17px;
-  }
-  .footer-bottom {
-    background-color: #111111;
-    color: #fff;
-  }
-  
-.footer-latest-post {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.footer-latest-post img {
-  max-width: 60px;
-  height: 60px;
-}
-.footer-latest-post h4 a {
-  color: #fff;
-  font-size: 16px;
-  line-height: 27px;
-}
-.footer-copy p{
-  margin-bottom: 0;
-}
-.footer-copy p a {
-  color: #fff;
-  font-weight: 600;
-}
-.footer-menu ul {
-  display: flex;
-  gap: 30px;
-  justify-content: flex-end;
-}
-.footer-menu ul li a {
-  color: #fff;
-  font-weight: 500;
-}
-
-.menu-footer-1-container ul li a {
-  color: #fff;
-  font-weight: 500;
-}
-.menu-footer-1-container ul li {
-  margin-bottom: 12px;
-}
-.menu-footer-1-container ul li:last-child {
-  margin-bottom: 0;
 }
 
 .woocommerce.columns-4 {
@@ -930,4 +894,810 @@ ul{
 }
 .woocommerce-breadcrumb {
 	display: none;
+}
+/* --- Base Footer Style --- */
+.footer-area {
+    padding: 100px 0 60px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    color: #cbd5e1;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-area::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #020617; /* High-end dark navy/black */
+    opacity: 0.97;
+    z-index: -1;
+}
+
+/* --- Widgets & Typography --- */
+.footer-logo img {
+    max-width: 160px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+}
+
+.footer-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.widget-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.widget-title::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 40px; height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #ef4444); /* Brand Colors */
+    border-radius: 10px;
+}
+
+/* --- Social Icons --- */
+.footer-social { display: flex; gap: 12px; }
+.footer-social a {
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.footer-social a:hover {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* --- Menu Links --- */
+.footer-menu-links ul { list-style: none; padding: 0; margin: 0; }
+.footer-menu-links ul li { margin-bottom: 12px; }
+.footer-menu-links ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    display: flex; align-items: center;
+}
+.footer-menu-links ul li a::before {
+    content: "\f105"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+    margin-right: 8px; font-size: 12px; opacity: 0; transition: 0.3s;
+}
+.footer-menu-links ul li a:hover { color: #fff; transform: translateX(5px); }
+.footer-menu-links ul li a:hover::before { opacity: 1; }
+
+/* --- Latest Posts --- */
+.footer-latest-post {
+    display: flex; gap: 15px; margin-bottom: 25px;
+    align-items: center;
+}
+.post-thumb img {
+    width: 70px; height: 70px; border-radius: 12px;
+    object-fit: cover; border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+.footer-latest-post:hover .post-thumb img { transform: scale(1.05); border-color: #3b82f6; }
+.post-date { font-size: 11px; text-transform: uppercase; color: #3b82f6; font-weight: 600; letter-spacing: 0.5px; }
+.post-title a { color: #fff; font-size: 15px; line-height: 1.4; transition: 0.3s; text-decoration: none; }
+.post-title a:hover { color: #3b82f6; }
+
+/* --- Contact Section --- */
+.footer-single-contact { display: flex; gap: 15px; margin-bottom: 20px; }
+.contact-icon {
+    min-width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(59, 130, 246, 0.1);
+    display: flex; align-items: center; justify-content: center; color: #3b82f6;
+}
+.contact-text h5 { margin: 0; font-size: 14px; text-transform: uppercase; color: #fff; font-weight: 700; }
+.contact-text span, .contact-text a { color: #94a3b8; font-size: 14px; text-decoration: none; transition: 0.3s; }
+.contact-text a:hover span { color: #fff; }
+
+/* --- Bottom Bar --- */
+.footer-bottom {
+    background: #020617;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-copy p { font-size: 14px; margin: 0; }
+.footer-copy a { color: #fff; font-weight: 600; text-decoration: none; }
+.footer-bottom-menu ul { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; justify-content: flex-end; }
+.footer-bottom-menu ul li a { color: #94a3b8; font-size: 13px; text-decoration: none; transition: 0.3s; }
+.footer-bottom-menu ul li a:hover { color: #fff; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-bottom-menu ul { justify-content: center; margin-top: 15px; }
+    .footer-area { padding: 60px 0; }
+}
+
+
+/* --- Product Box Container --- */
+.single-product-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 15px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.single-product-box:hover {
+    border-color: #3b82f6; /* Solid Blue Border on Hover */
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Thumbnail & Overlay --- */
+.product-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f8fafc;
+    margin-bottom: 20px;
+}
+
+.product-thumbnail img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Keeps medical products looking clean */
+    padding: 10px;
+    transition: transform 0.6s ease;
+}
+
+.single-product-box:hover .product-thumbnail img {
+    transform: scale(1.1);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(3, 27, 78, 0.6); /* Deep navy tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.single-product-box:hover .product-overlay {
+    opacity: 1;
+}
+
+.view-btn {
+    background: #ffffff;
+    color: #031b4e;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- Details & Typography --- */
+.product-details {
+    text-align: center;
+}
+
+.product-title {
+    margin-bottom: 10px;
+}
+
+.product-title a {
+    font-size: 18px;
+    color: #031b4e;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-title a:hover {
+    color: #3b82f6;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ef4444; /* Solid Red for Price */
+    margin-bottom: 20px;
+}
+
+/* WooCommerce Price HTML fix */
+.product-price del {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+.product-price ins {
+    text-decoration: none;
+}
+
+/* --- Add to Cart Button --- */
+.add-to-cart-button {
+    width: 100%;
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-to-cart-button:hover {
+    background: #031b4e; /* Change to Navy on Hover */
+    transform: scale(1.02);
+}
+
+.add-to-cart-button i {
+    font-size: 14px;
+}
+
+/* --- Blog Card Container --- */
+.single-blog {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-blog:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: #3b82f6;
+}
+
+/* --- Thumbnail & Badge --- */
+.blog-thumb-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-thumb-wrapper img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.single-blog:hover .blog-thumb-wrapper img {
+    transform: scale(1.1);
+}
+
+.blog-date-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #3b82f6;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* --- Content Styling --- */
+.blog-grid-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-grid-meta {
+    margin-bottom: 15px;
+}
+
+.meta-item {
+    font-size: 13px;
+    color: #3b82f6;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-item i {
+    margin-right: 5px;
+}
+
+/* Remove default UL styling from the_category() */
+.meta-item ul, .meta-item li {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-title {
+    margin-bottom: 15px;
+}
+
+.blog-title a {
+    font-size: 22px;
+    line-height: 1.3;
+    color: #031b4e;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.blog-title a:hover {
+    color: #3b82f6;
+}
+
+.blog-excerpt {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* --- Interactive Read More --- */
+.read-more-btn {
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 700;
+    color: #031b4e;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: #3b82f6;
+}
+
+.read-more-btn:hover i {
+    transform: translateX(8px);
+}
+
+
+/* --- Features Area Layout --- */
+.features-area {
+    padding: 100px 0;
+    background-color: #f8fafc; /* Soft slate to let white cards pop */
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- The Modern Feature Card --- */
+.single-feature {
+    background: #ffffff;
+    padding: 50px 35px;
+    border-radius: 28px; /* High-end rounded corners */
+    border: 1px solid #edf2f7;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left aligned for modern SaaS feel */
+}
+
+/* Hover State: The "Glow" Effect */
+.single-feature:hover {
+    transform: translateY(-12px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 30px 60px -12px rgba(3, 27, 78, 0.12);
+}
+
+/* --- The Icon Box Container --- */
+.feature-icon-box {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 26px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+    background: #eff6ff; /* Solid light blue */
+    color: #3b82f6;
+}
+
+/* Specific Brand Colors (No Gradients) */
+.feature-icon-box.box-red { background: #fef2f2; color: #ef4444; }
+.feature-icon-box.box-green { background: #f0fdf4; color: #22c55e; }
+.feature-icon-box.box-orange { background: #fffbeb; color: #f59e0b; }
+
+/* Icon Animation on Hover */
+.single-feature:hover .feature-icon-box {
+    transform: scale(1.15) rotate(-8deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Typography --- */
+.single-feature h4 {
+    font-size: 22px;
+    color: #031b4e;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.single-feature p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #64748b;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --- Interactive "Learn More" Arrow (Optional Addition) --- */
+.single-feature::after {
+    content: "\f178"; /* FontAwesome Right Arrow */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    font-size: 18px;
+    color: #3b82f6;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.single-feature:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Responsive Polish --- */
+@media (max-width: 991px) {
+    .single-feature {
+        padding: 40px 25px;
+        text-align: center;
+        align-items: center;
+    }
+    .feature-icon-box {
+        margin: 0 auto 25px;
+    }
+    .single-feature::after {
+        display: none; /* Hide arrow on mobile to save space */
+    }
+}
+
+
+/* --- Banner Base --- */
+.banner-area {
+    padding: 100px 0;
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #031b4e;
+    opacity: 0.88; /* Deep Navy Overlay for readability */
+    z-index: -1;
+}
+
+/* --- Content Typography --- */
+.banner-content {
+    color: #ffffff;
+    animation: fadeInContent 1s ease-out;
+}
+
+.product-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: 6px;
+    color: #3b82f6;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.banner-content h4 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.banner-content h4 span {
+    color: #3b82f6;
+}
+
+.banner-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+/* --- Modern Buttons --- */
+.banner-btns {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-main {
+    background: #3b82f6;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-main:hover {
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: #fff;
+}
+
+/* --- Floating Image & Glow --- */
+.banner-img-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.banner-img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+.img-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 300px; height: 300px;
+    background: #3b82f6;
+    filter: blur(140px);
+    opacity: 0.15;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Carousel Indicators --- */
+.custom-indicators {
+    bottom: 30px;
+}
+
+.custom-indicators button {
+    width: 30px !important;
+    height: 4px !important;
+    border-radius: 10px !important;
+    background-color: rgba(255,255,255,0.2) !important;
+    border: none !important;
+}
+
+.custom-indicators .active {
+    background-color: #3b82f6 !important;
+    width: 50px !important;
+}
+
+/* --- Entrance Animation --- */
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .banner-content h4 { font-size: 36px; }
+    .banner-area { padding: 60px 0; text-align: center; min-height: auto; }
+    .banner-btns { justify-content: center; }
+    .banner-img-wrapper { margin-top: 40px; }
+    .banner-content p { max-width: 100%; }
+}
+
+
+/* --- Top Bar Styling --- */
+.header-top {
+    background: #031b4e; /* Dark Navy */
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header-contact a {
+    color: #cbd5e1;
+    font-size: 13px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-contact i {
+    color: #3b82f6; /* Accent Blue */
+    margin-right: 6px;
+}
+
+.header-top-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-box a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.user-logged {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-logged img {
+    border-radius: 50%;
+    border: 1px solid #3b82f6;
+}
+
+.logout-link { color: #ef4444 !important; }
+
+/* --- Sticky Main Header --- */
+.main-header {
+    background: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.logo img {
+    max-height: 55px;
+    width: auto;
+}
+
+/* --- Nav Menu List --- */
+.nav-menu-list {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-menu-list li a {
+    color: #031b4e;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-menu-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 3px;
+    background: #3b82f6;
+    transition: 0.3s;
+}
+
+.nav-menu-list li a:hover::after { width: 100%; }
+
+/* --- Cart Button & Actions --- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f5f9;
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #031b4e;
+    font-weight: 800;
+    position: relative;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px; right: -5px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    width: 20px; height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.mobile-menu-toggle {
+    background: #031b4e;
+    color: #fff;
+    border: none;
+    width: 45px; height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
 }

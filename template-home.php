@@ -7,105 +7,129 @@ Template Name: Home
 get_header(); ?>
 
 <section class="banner-area" style="background-image: url('<?php echo get_template_directory_uri();?>/assets/img/bg.jpg');">
+    <div class="banner-overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="5" aria-label="Slide 5"></button>
+                <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                    
+                    <div class="carousel-indicators custom-indicators">
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4"></button>
                     </div>
 
                     <div class="carousel-inner">
+                        
                         <div class="carousel-item active">
                             <div class="row align-items-center">
-                                <div class="col-md-8">
+                                <div class="col-lg-7 col-md-8">
                                     <div class="banner-content">
-                                        <span>Megaton</span>
-                                        <h4>A great combination of vitamins, minerals, and natural ingredients.</h4>
-                                        <p>Megaton tablets can be your daily companion to meet your body’s need for essential vitamins, minerals, and amino acids.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/megaton-super-multivitamin/">See Details</a>
+                                        <span class="product-badge">Daily Wellness</span>
+                                        <h4>Megaton: <span>Power of Vitamins</span></h4>
+                                        <p>A great combination of vitamins, minerals, and natural ingredients. Your daily companion to meet your body’s essential needs.</p>
+                                        <div class="banner-btns">
+                                            <a href="https://fortuneinternationalbd.com/product/megaton-super-multivitamin/" class="btn-main">See Details <i class="fa-solid fa-arrow-right"></i></a>
+                                            <a href="#" class="btn-secondary">View Catalog</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="banner-img-wrapper">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/megaton.png" alt="Megaton">
+                                        <div class="img-glow"></div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
 
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class="banner-img">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/megaton.png" class="" alt="...">
-                                    </div>
-                                </div>
-                            </div>                        
-                        </div>
                         <div class="carousel-item">
                             <div class="row align-items-center">
-                                <div class="col-md-8">
+                                <div class="col-lg-7 col-md-8">
                                     <div class="banner-content">
-                                        <span>Super Flex</span>
-                                        <h4>A complete solution for joint pain and better physical movement!</h4>
-                                        <p>Super Flex tablets can be a great choice for relieving joint pain. It helps with joint pain, bone weakness, and improving mobility.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/super-flex/">See Details</a>
+                                        <span class="product-badge">Bone & Joint Care</span>
+                                        <h4>Super Flex: <span>Move Freely</span></h4>
+                                        <p>A complete solution for joint pain and better physical movement. Relieves bone weakness and improves mobility effectively.</p>
+                                        <div class="banner-btns">
+                                            <a href="https://fortuneinternationalbd.com/product/super-flex/" class="btn-main">See Details <i class="fa-solid fa-arrow-right"></i></a>
+                                            <a href="#" class="btn-secondary">Watch Info</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class="banner-img">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/superflex.png" class="" alt="...">
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="banner-img-wrapper">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/superflex.png" alt="Super Flex">
+                                        <div class="img-glow"></div>
                                     </div>
                                 </div>
                             </div>                        
                         </div>
+
                         <div class="carousel-item">
                             <div class="row align-items-center">
-                                <div class="col-md-8">
+                                <div class="col-lg-7 col-md-8">
                                     <div class="banner-content">
-                                        <span>Biomore Plus</span>
-                                        <h4>A complete solution for bone and overall physical health!</h4>
-                                        <p>It provides calcium, magnesium, vitamins, and other essential nutrients to different parts of the body, which are very important for a healthy and normal lifestyle.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/bimore-plus/">See Details</a>
+                                        <span class="product-badge">Essential Minerals</span>
+                                        <h4>Biomore Plus: <span>Vital Health</span></h4>
+                                        <p>Provides calcium, magnesium, and vitamins essential for a healthy lifestyle and normal bodily functions.</p>
+                                        <div class="banner-btns">
+                                            <a href="https://fortuneinternationalbd.com/product/bimore-plus/" class="btn-main">See Details <i class="fa-solid fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class="banner-img">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/biomore-plus.png" class="" alt="...">
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="banner-img-wrapper">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/biomore-plus.png" alt="Biomore Plus">
+                                        <div class="img-glow"></div>
                                     </div>
                                 </div>
                             </div>                        
                         </div>
+
                         <div class="carousel-item">
                             <div class="row align-items-center">
-                                <div class="col-md-8">
+                                <div class="col-lg-7 col-md-8">
                                     <div class="banner-content">
-                                        <span>CALCIBONE</span>
-                                        <h4>A complete and effective solution for strong bones and teeth</h4>
-                                        <p>Take Calcibone Suspension now to strengthen your bones and teeth and help prevent osteoporosis (bone loss)!</p>
-                                        <a href="https://fortuneinternationalbd.com/product/calcibone/">See Details</a>
+                                        <span class="product-badge">Strong Foundation</span>
+                                        <h4>Calcibone: <span>Stronger Teeth</span></h4>
+                                        <p>A complete solution for strong bones and teeth, helping prevent osteoporosis and bone loss for all ages.</p>
+                                        <div class="banner-btns">
+                                            <a href="https://fortuneinternationalbd.com/product/calcibone/" class="btn-main">See Details <i class="fa-solid fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class="banner-img">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/calcibone.png" class="" alt="...">
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="banner-img-wrapper">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/calcibone.png" alt="Calcibone">
+                                        <div class="img-glow"></div>
                                     </div>
                                 </div>
                             </div>                        
                         </div>
+
                         <div class="carousel-item">
                             <div class="row align-items-center">
-                                <div class="col-md-8">
+                                <div class="col-lg-7 col-md-8">
                                     <div class="banner-content">
-                                        <span>Procive Ultra</span>
-                                        <h4>A complete and effective solution for treating PCOS/PCOD to support your well-being!</h4>
-                                        <p>It helps improve reproductive health, enhance egg quality, and maintain hormonal balance.</p>
-                                        <a href="https://fortuneinternationalbd.com/product/procive-ultra/">See Details</a>
+                                        <span class="product-badge">Hormonal Balance</span>
+                                        <h4>Procive Ultra: <span>PCOS Support</span></h4>
+                                        <p>An effective solution for treating PCOS/PCOD, enhancing egg quality, and maintaining reproductive health.</p>
+                                        <div class="banner-btns">
+                                            <a href="https://fortuneinternationalbd.com/product/procive-ultra/" class="btn-main">See Details <i class="fa-solid fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class="banner-img">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/procive-ultra.png" class="" alt="...">
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="banner-img-wrapper">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/procive-ultra.png" alt="Procive Ultra">
+                                        <div class="img-glow"></div>
                                     </div>
                                 </div>
                             </div>                        
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -116,32 +140,40 @@ get_header(); ?>
 <section class="features-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="single-feature">
-                    <i class="fa-solid fa-truck"></i>
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
                     <h4>Fast Delivery</h4>
-                    <p>We offer fast and reliable local shipping to make sure your health products reach your doorstep safely and on time.</p>
+                    <p>Reliable local shipping to ensure your health products reach your doorstep safely and on time.</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="single-feature">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="feature-icon-box box-red">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
                     <h4>Top Quality</h4>
-                    <p>Our health products are carefully and precisely made to ensure the highest standards, helping to support your well-being.</p>
+                    <p>Products carefully made to ensure the highest standards, supporting your long-term well-being.</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="single-feature">
-                    <i class="fa-solid fa-mug-hot"></i>
+                    <div class="feature-icon-box box-green">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
                     <h4>Best Offers</h4>
-                    <p>Take advantage of our exclusive offers, where you can get top-quality health products at the best prices and benefits.</p>
+                    <p>Exclusive offers where you get top-quality health products at the most competitive prices.</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="single-feature">
-                    <i class="fa-solid fa-money-bill"></i>
+                    <div class="feature-icon-box box-orange">
+                        <i class="fa-solid fa-money-bill"></i>
+                    </div>
                     <h4>Secure Payment</h4>
-                    <p>With our secure payment system, you can shop online with peace of mind, knowing your personal and payment information is protected with the highest security.</p>
+                    <p>Shop with peace of mind knowing your data is protected with the highest industry security.</p>
                 </div>
             </div>
         </div>
@@ -152,10 +184,16 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="section-title">
-                    <h4>Our Products</h4>
-                    <p>Discover the benefits of choosing our exclusive medical products, crafted to the <br> highest quality standards and designed to improve your health.</p>
-                </div>
+                <div class="section-container">
+    <div class="section-title">
+        <div class="sub-badge-wrapper">
+            <span class="sub-badge animate-badge">Premium Selection</span>
+        </div>
+        <h4>Our <span>Products</span></h4>
+        <div class="title-divider"></div>
+        <p>Discover the benefits of choosing our exclusive medical products, crafted to the <br> highest quality standards and designed to improve your health.</p>
+    </div>
+</div>
             </div>
         </div>
         <div class="row">
@@ -174,26 +212,40 @@ get_header(); ?>
             ?>
                 <div class="col-md-4">
                     <div class="single-product-box">
-                        <div class="product-thumbnail">
-                            <?php 
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail('full');
-                            }
-                            ?>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-                            <?php
-                            global $product;
-                            if ( $product ) {
-                                echo '<p class="product-price">' . $product->get_price_html() . '</p>';
-                            }
-                            ?>
-                            <form action="<?php echo esc_url( home_url( '/?add-to-cart=' . get_the_ID() ) ); ?>" method="post" class="cart">
-                                <button type="submit" class="add-to-cart-button">Add to Cart</button>
-                            </form>
-                        </div>
-                    </div>
+    <div class="product-thumbnail">
+        <a href="<?php the_permalink();?>" class="thumb-link">
+            <?php 
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail('medium_large'); // 'full' is often too heavy for grids
+            }
+            ?>
+            <div class="product-overlay">
+                <span class="view-btn">View Details</span>
+            </div>
+        </a>
+    </div>
+    
+    <div class="product-details">
+        <h4 class="product-title">
+            <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+        </h4>
+        
+        <?php
+        global $product;
+        if ( $product ) {
+            echo '<div class="product-price">' . $product->get_price_html() . '</div>';
+        }
+        ?>
+
+        <div class="product-action">
+            <form action="<?php echo esc_url( home_url( '/?add-to-cart=' . get_the_ID() ) ); ?>" method="post" class="cart">
+                <button type="submit" class="add-to-cart-button">
+                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
                 </div>
             <?php
                 endwhile;
@@ -211,10 +263,16 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="section-title">
-                    <h4>Latest Blog</h4>
-                    <p>On our blog, you’ll find various health tips and tricks to help you build healthy habits in your daily life. <br/> Easy ways to support health, the importance of nutrition, and essential advice for keeping both your body and mind in good shape will be shared here.</p>
-                </div>
+                <div class="section-container">
+    <div class="section-title">
+        <div class="sub-badge-wrapper">
+            <span class="sub-badge animate-badge">Premium Selection</span>
+        </div>
+        <h4>Our <span>Products</span></h4>
+        <div class="title-divider"></div>
+        <p>Discover the benefits of choosing our exclusive medical products, crafted to the <br> highest quality standards and designed to improve your health.</p>
+    </div>
+</div>
             </div>
         </div>
         <div class="row">
@@ -231,17 +289,33 @@ get_header(); ?>
             ?>
                 <div class="col-md-4">
                     <div class="single-blog">
-                        <?php the_post_thumbnail();?>
-                        <div class="blog-grid-content">
-                            <div class="blog-grid-meta">
-                                <span><?php echo get_the_date('F j, Y');;?></span>
-                                <span><?php the_category(); ?></span>
-                            </div>
-                            <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-                            <?php the_excerpt();?>
-                            <a href="<?php the_permalink();?>">Read More</a>
-                        </div>
-                    </div>
+    <div class="blog-thumb-wrapper">
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('medium_large'); ?>
+        </a>
+        <div class="blog-date-badge">
+            <?php echo get_the_date('M j'); ?>
+        </div>
+    </div>
+
+    <div class="blog-grid-content">
+        <div class="blog-grid-meta">
+            <span class="meta-item"><i class="fa-regular fa-folder-open"></i> <?php the_category(', '); ?></span>
+        </div>
+        
+        <h4 class="blog-title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h4>
+        
+        <div class="blog-excerpt">
+            <?php echo wp_trim_words(get_the_excerpt(), 18, '...'); ?>
+        </div>
+        
+        <a href="<?php the_permalink(); ?>" class="read-more-btn">
+            Read More <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+    </div>
+</div>
                 </div>
             <?php
                 endwhile;
