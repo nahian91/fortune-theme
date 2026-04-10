@@ -105,7 +105,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">
                 <div class="footer-copy">
-                    <p>&copy; <?php echo date('Y'); ?> Developed by <a href="https://infinityflamesoft.com/" target="_blank">Infinity Flame Soft</a></p>
+                    <p>&copy; <?php echo date('Y'); ?> Design & Developed by <a href="https://infinityflamesoft.com/" target="_blank">Infinity Flame Soft</a></p>
                 </div>
             </div>
             <div class="col-md-6 text-center text-md-end">

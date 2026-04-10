@@ -109,3 +109,29 @@ function custom_woocommerce_thumbnail_size() {
     });
 }
 add_action( 'wp', 'custom_woocommerce_thumbnail_size' );
+
+
+// Excerpt Limit (Set to 20 words)
+add_filter('excerpt_length', function($length) {
+    return 20;
+}, 999);
+
+// Disable Comments Fully
+add_action('admin_init', function () {
+    $post_types = get_post_types();
+    foreach ($post_types as $post_type) {
+        if (post_type_supports($post_type, 'comments')) {
+            remove_post_type_support($post_type, 'comments');
+            remove_post_type_support($post_type, 'trackbacks');
+        }
+    }
+});
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);
+add_action('wp_before_admin_bar_render', function() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+});
+
+// Remove default sorting dropdown
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );

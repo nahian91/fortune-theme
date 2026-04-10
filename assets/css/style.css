@@ -7,6 +7,12 @@
 :root{
     --primary-color: #031b4e;
 }
+.pt-80{
+  padding-top: 80px;
+}
+.pb-80{
+  padding-bottom: 80px;
+}
 body{
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -389,15 +395,11 @@ ul{
   padding: 80px 0;
 }
 
-/* Container Spacing */
-.section-container {
-    padding: 100px 0 50px;
-    text-align: center;
-}
-
 .section-title {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 /* 1. The Badge with Animation */
@@ -408,14 +410,14 @@ ul{
 .sub-badge {
     display: inline-block;
     background: rgba(59, 130, 246, 0.1); /* Light Blue Tint */
-    color: #3b82f6; /* Solid Blue */
+    color: #031b4e; /* Solid Blue */
     padding: 5px 15px;
     border-radius: 6px; /* Slightly sharper, modern corners */
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    border: 1px solid #031b4e;
 }
 
 /* Subtle Badge Animation (Soft Pulse) */
@@ -434,34 +436,33 @@ ul{
     }
 }
 
-/* 2. The Heading (Solid High Contrast) */
 .section-title h4 {
-    font-size: 44px;
-    line-height: 1.1;
-    color: #031b4e;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+	font-size: 40px;
+	color: #031b4e;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 .section-title h4 span {
-    color: #ef4444; /* Solid Brand Red for emphasis */
+    color: #031b4e; /* Solid Brand Red for emphasis */
 }
 
 /* 3. The Solid Divider */
 .title-divider {
     width: 50px;
-    height: 3px;
-    background: #3b82f6; /* Solid Primary Blue */
-    margin: 0 auto 30px;
+    height: 2px;
+    background: #031b4e; /* Solid Primary Blue */
     border-radius: 2px;
+    margin: 0 auto 30px;
 }
-
+.about-content-wrapper.ps-lg-4 .title-divider {
+	margin: 0;
+}
 /* 4. The Typography */
 .section-title p {
-    font-size: 18px;
-    color: #475569; /* Professional Slate Grey */
-    line-height: 1.7;
+    font-size: 16px;
+    color: #111; /* Professional Slate Grey */
+    line-height: 1.5;
     font-weight: 400;
     margin: 0 auto;
 }
@@ -897,7 +898,7 @@ ul{
 }
 /* --- Base Footer Style --- */
 .footer-area {
-    padding: 100px 0 60px;
+    padding: 60px 0;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -929,21 +930,23 @@ ul{
 }
 
 .widget-title {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 35px;
-    position: relative;
-    padding-bottom: 12px;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 500;
+	margin-bottom: 25px;
+	position: relative;
+	padding-bottom: 12px;
 }
 
 .widget-title::after {
-    content: "";
-    position: absolute;
-    left: 0; bottom: 0;
-    width: 40px; height: 3px;
-    background: linear-gradient(90deg, #3b82f6, #ef4444); /* Brand Colors */
-    border-radius: 10px;
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 40px;
+	height: 1px;
+	background-color: #ddd;
+	border-radius: 10px;
 }
 
 /* --- Social Icons --- */
@@ -968,7 +971,7 @@ ul{
 .footer-menu-links ul { list-style: none; padding: 0; margin: 0; }
 .footer-menu-links ul li { margin-bottom: 12px; }
 .footer-menu-links ul li a {
-    color: #94a3b8;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s ease;
@@ -976,7 +979,7 @@ ul{
 }
 .footer-menu-links ul li a::before {
     content: "\f105"; font-family: "Font Awesome 6 Free"; font-weight: 900;
-    margin-right: 8px; font-size: 12px; opacity: 0; transition: 0.3s;
+    margin-right: 8px; font-size: 12px; transition: 0.3s;
 }
 .footer-menu-links ul li a:hover { color: #fff; transform: translateX(5px); }
 .footer-menu-links ul li a:hover::before { opacity: 1; }
@@ -992,7 +995,7 @@ ul{
     transition: 0.3s;
 }
 .footer-latest-post:hover .post-thumb img { transform: scale(1.05); border-color: #3b82f6; }
-.post-date { font-size: 11px; text-transform: uppercase; color: #3b82f6; font-weight: 600; letter-spacing: 0.5px; }
+.post-date { font-size: 11px; text-transform: uppercase; color: #fff; font-weight: 600; letter-spacing: 0.5px; }
 .post-title a { color: #fff; font-size: 15px; line-height: 1.4; transition: 0.3s; text-decoration: none; }
 .post-title a:hover { color: #3b82f6; }
 
@@ -1003,8 +1006,15 @@ ul{
     background: rgba(59, 130, 246, 0.1);
     display: flex; align-items: center; justify-content: center; color: #3b82f6;
 }
-.contact-text h5 { margin: 0; font-size: 14px; text-transform: uppercase; color: #fff; font-weight: 700; }
-.contact-text span, .contact-text a { color: #94a3b8; font-size: 14px; text-decoration: none; transition: 0.3s; }
+.contact-text h5 {
+	margin: 0;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+.contact-text span, .contact-text a { color: #fff; font-size: 15px; text-decoration: none; transition: 0.3s; }
 .contact-text a:hover span { color: #fff; }
 
 /* --- Bottom Bar --- */
@@ -1013,7 +1023,7 @@ ul{
     padding: 25px 0;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
-.footer-copy p { font-size: 14px; margin: 0; }
+.footer-copy p { font-size: 14px; margin: 0; color: #fff;}
 .footer-copy a { color: #fff; font-weight: 600; text-decoration: none; }
 .footer-bottom-menu ul { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; justify-content: flex-end; }
 .footer-bottom-menu ul li a { color: #94a3b8; font-size: 13px; text-decoration: none; transition: 0.3s; }
@@ -1208,7 +1218,7 @@ ul{
 
 /* --- Content Styling --- */
 .blog-grid-content {
-    padding: 25px;
+    padding: 15px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -1290,7 +1300,7 @@ ul{
 
 /* --- Features Area Layout --- */
 .features-area {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: #f8fafc; /* Soft slate to let white cards pop */
     position: relative;
     overflow: hidden;
@@ -1299,7 +1309,7 @@ ul{
 /* --- The Modern Feature Card --- */
 .single-feature {
     background: #ffffff;
-    padding: 50px 35px;
+    padding: 20px 25px;
     border-radius: 28px; /* High-end rounded corners */
     border: 1px solid #edf2f7;
     height: 100%;
@@ -1322,37 +1332,22 @@ ul{
 .feature-icon-box {
     width: 65px;
     height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 18px;
     font-size: 26px;
-    margin-bottom: 30px;
     position: relative;
     transition: all 0.4s ease;
-    background: #eff6ff; /* Solid light blue */
     color: #3b82f6;
+    width: 100%;
 }
 
-/* Specific Brand Colors (No Gradients) */
-.feature-icon-box.box-red { background: #fef2f2; color: #ef4444; }
-.feature-icon-box.box-green { background: #f0fdf4; color: #22c55e; }
-.feature-icon-box.box-orange { background: #fffbeb; color: #f59e0b; }
-
-/* Icon Animation on Hover */
-.single-feature:hover .feature-icon-box {
-    transform: scale(1.15) rotate(-8deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-/* --- Typography --- */
 .single-feature h4 {
-    font-size: 22px;
-    color: #031b4e;
-    font-weight: 800;
-    margin-bottom: 18px;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
+	font-size: 22px;
+	color: #031b4e;
+	font-weight: 600;
+	margin-bottom: 18px;
+	text-align: center;
+	line-height: 1.2;
+	width: 100%;
 }
 
 .single-feature p {
@@ -1363,30 +1358,10 @@ ul{
     font-weight: 400;
 }
 
-/* --- Interactive "Learn More" Arrow (Optional Addition) --- */
-.single-feature::after {
-    content: "\f178"; /* FontAwesome Right Arrow */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-    font-size: 18px;
-    color: #3b82f6;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.4s ease;
-}
-
-.single-feature:hover::after {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 /* --- Responsive Polish --- */
 @media (max-width: 991px) {
     .single-feature {
-        padding: 40px 25px;
+        padding: 20px 25px;
         text-align: center;
         align-items: center;
     }
@@ -1504,11 +1479,11 @@ ul{
 /* --- Floating Image & Glow --- */
 .banner-img-wrapper {
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 
 .banner-img-wrapper img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
     animation: floating 5s ease-in-out infinite;
@@ -1572,7 +1547,7 @@ ul{
 }
 
 .header-contact a {
-    color: #cbd5e1;
+    color: #fff;
     font-size: 13px;
     margin-right: 20px;
     text-decoration: none;
@@ -1580,7 +1555,7 @@ ul{
 }
 
 .header-contact i {
-    color: #3b82f6; /* Accent Blue */
+    color: #fff; /* Accent Blue */
     margin-right: 6px;
 }
 
@@ -1635,7 +1610,7 @@ ul{
 
 .nav-menu-list li a {
     color: #031b4e;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     text-decoration: none;
     padding: 8px 0;
@@ -1646,8 +1621,8 @@ ul{
     content: '';
     position: absolute;
     bottom: 0; left: 0;
-    width: 0; height: 3px;
-    background: #3b82f6;
+    width: 0; height: 2px;
+    background: #031b4e;
     transition: 0.3s;
 }
 
@@ -1670,13 +1645,13 @@ ul{
     border-radius: 12px;
     text-decoration: none;
     color: #031b4e;
-    font-weight: 800;
+    font-weight: 600;
     position: relative;
     transition: 0.3s;
 }
 
 .cart-btn:hover {
-    background: #3b82f6;
+    background: #031b4e;
     color: #fff;
 }
 
@@ -1700,4 +1675,800 @@ ul{
     width: 45px; height: 45px;
     border-radius: 10px;
     font-size: 20px;
+}
+.woocommerce-products-header {
+  display: none;
+}
+.woocommerce-result-count {
+  display: none;
+}
+
+/* Single Product Wrapper */
+.single-product-wrapper {
+    background-color: #fcfcfd;
+}
+
+/* Glass Effect for Images */
+.product-image-container {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+}
+
+.woocommerce-product-gallery img {
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+/* Product Info Column */
+.custom-product-details .product_title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #011c47; /* Apnar logo-r dark blue */
+    margin-bottom: 15px;
+}
+
+.custom-product-details .price {
+    font-size: 1.8rem !important;
+    color: #cc0000 !important; /* Accent Red */
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.custom-product-details .woocommerce-product-details__short-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    border-left: 4px solid #011c47;
+    padding-left: 15px;
+}
+
+/* Quantity & Add to Cart Button */
+.cart .quantity {
+    margin-right: 15px;
+}
+
+.cart .quantity input {
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.single_add_to_cart_button {
+    height: 50px;
+    background-color: #011c47 !important;
+    color: #fff !important;
+    padding: 0 40px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(1, 28, 71, 0.2);
+}
+
+.single_add_to_cart_button:hover {
+    background-color: #cc0000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.2);
+}
+
+/* Tabs Styling */
+.woocommerce-tabs ul.tabs {
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 30px !important;
+}
+
+.woocommerce-tabs ul.tabs li {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.woocommerce-tabs ul.tabs li a {
+    font-weight: 700 !important;
+    color: #888 !important;
+    font-size: 1.1rem;
+    padding: 10px 0 !important;
+    margin-right: 30px;
+    border-bottom: 2px solid transparent;
+}
+
+.woocommerce-tabs ul.tabs li.active a {
+    color: #011c47 !important;
+    border-bottom: 2px solid #011c47;
+}
+
+/* Related Products Header */
+.related.products h2, 
+.upsells.products h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #011c47;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.related.products {
+	display: none;
+}
+
+.cta-section-glass {
+    padding: 80px 0;
+    background-color: #16284a;
+    background-attachment: fixed; /* Parallax Effect */
+}
+
+.cta-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.cta-tag {
+    background: #031b4e;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.cta-card h2 {
+	font-size: 45px;
+	font-weight: 700;
+	margin: 20px 0;
+	text-transform: capitalize;
+}
+
+.btn-primary-red {
+    background: #031b4e;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.btn-outline-white {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 13px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Testimonial Section */
+.testimonial-area {
+    background-color: #f8faff; /* Very light blue background */
+}
+
+.single-testimonial {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(1, 28, 71, 0.05);
+    border: 1px solid #eee;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.single-testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(1, 28, 71, 0.1);
+    border-color: #011c47;
+}
+
+.quote-icon {
+    color: #011c47; /* Red accent */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.testimonial-footer {
+    border-top: 1px solid #f1f1f1;
+    padding-top: 20px;
+}
+
+.client-info h5 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #011c47;
+    margin-bottom: 3px;
+}
+
+.client-info span {
+    font-size: 13px;
+    color: #888;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rating-stars {
+    color: #ffb400; /* Gold/Yellow for stars */
+    font-size: 12px;
+}
+
+/* Divider Center Alignment */
+.title-divider.m-auto {
+    margin: 15px auto !important;
+}
+
+.how-to-order {
+    background: #ffffff;
+}
+
+.process-row {
+    position: relative;
+}
+
+/* Connecting Line for Desktop */
+@media (min-width: 992px) {
+    .process-row::before {
+        content: '';
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        border-top: 2px dashed #e0e0e0;
+        z-index: 1;
+    }
+}
+
+.process-step {
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background: #f8faff;
+    border: 2px solid #011c47; /* Your Dark Blue */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    color: #011c47;
+    transition: 0.4s;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #cc0000; /* Red Accent */
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-step h5 {
+    font-weight: 700;
+    color: #011c47;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    font-size: 14px;
+    color: #777;
+    padding: 0 15px;
+}
+
+/* Hover Effect */
+.process-step:hover .step-icon-wrapper {
+    background: #011c47;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(1, 28, 71, 0.2);
+}
+
+/* Expert Guidance Section */
+.expert-guidance-area {
+    background-color: #f8faff; /* Very light trusted blue background */
+    overflow: hidden; /* For decorative shapes */
+}
+
+/* Image Wrapper & Decorative Shape */
+.doctor-image-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.doctor-photo {
+    max-width: 90% !important;
+    position: relative;
+    z-index: 3;
+    /* Soft shadow for depth */
+    filter: drop-shadow(0 15px 30px rgba(1, 28, 71, 0.1));
+}
+
+.doctor-bg-shape {
+    position: absolute;
+    bottom: -30px;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(1, 28, 71, 0.04); /* Very light blue shape */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Organic organic shape */
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.expert-guidance-area:hover .doctor-bg-shape {
+    border-radius: 50%; /* Smooth transition on hover */
+}
+
+/* Content & Typography */
+.expert-content-wrapper {
+    padding-left: 20px;
+}
+
+/* Reusing your section title style for uniformity */
+.expert-guidance-area .section-title h4 span {
+    color: #cc0000; /* Red accent from screenshot */
+}
+
+/* Quote Block Styling */
+.expert-quote-block {
+    position: relative;
+    padding-left: 30px;
+}
+
+.quote-icon-main {
+    color: #cc0000;
+    font-size: 28px;
+    opacity: 0.2;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.expert-quote-block blockquote {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #011c47; /* Deep blue from logo */
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expert-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 600px;
+}
+
+/* Button Styling (Matching Screenshot Button Feel) */
+.expert-action-btns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-dark {
+    background-color: #011c47; /* Logo Deep Blue */
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(1, 28, 71, 0.1);
+}
+
+.btn-primary-dark:hover {
+    background-color: #cc0000; /* Red Hover Accent */
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.15);
+}
+
+.btn-outline-whatsapp {
+    border: 2px solid #25D366; /* WhatsApp Green */
+    color: #25D366;
+    padding: 13px 35px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.btn-outline-whatsapp:hover {
+    background-color: #25D366;
+    color: #fff;
+}
+
+/* Fortune International Marquee */
+.fortune-marquee {
+    background-color: #011c47; /* Brand Dark Blue */
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    border-top: 2px solid #cc0000; /* Subtle Red Accent Line */
+    margin-bottom: 30px;
+}
+
+/* Side Fade Effect for that "Premium" feel */
+.fortune-marquee::before,
+.fortune-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+.fortune-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #011c47, transparent);
+}
+.fortune-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #011c47, transparent);
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-fortune 30s linear infinite; /* Adjust speed here */
+}
+
+/* Pause on hover so people can read it */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 50px; /* Space between features */
+}
+
+.item-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #011c47;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.item-label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* The Magic Animation */
+@keyframes scroll-fortune {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves exactly half the width of the track */
+    }
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    .fortune-marquee { padding: 15px 0; }
+    .item-label { font-size: 14px; }
+    .item-icon { width: 30px; height: 30px; font-size: 12px; }
+    .marquee-item { padding: 0 25px; }
+}
+
+/* About Us Section Custom CSS */
+.about-fortune-area {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.about-image-stack {
+    position: relative;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.about-image-stack .main-image img {
+    border-radius: 15px;
+    border: 10px solid #f8faff;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #011c47; /* Your Dark Blue */
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(1, 28, 71, 0.2);
+    border-left: 5px solid #cc0000; /* Red Accent */
+}
+
+.exp-num {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.exp-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-headline {
+	font-size: 45px;
+	font-weight: 700;
+	color: #011c47;
+	margin-bottom: 25px;
+}
+
+.about-headline span {
+    color: #cc0000; /* Red Accent */
+}
+
+.about-para {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Feature Grid inside About */
+.about-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-feat-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.feat-icon {
+    font-size: 24px;
+    color: #cc0000;
+    background: #fff5f5;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.about-feat-item h6 {
+    margin: 0;
+    font-weight: 700;
+    color: #011c47;
+}
+
+.about-feat-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+.founder-sign {
+    max-width: 150px;
+    opacity: 0.7;
+}
+
+/* Responsive Gutter */
+@media (max-width: 991px) {
+    .about-image-stack {
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+    .about-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fortune-services {
+	background-color: #ffffff;
+	padding-top: 100px !important;
+	border-top: 1px solid #ddd;
+}
+
+.service-card {
+    background: #f8faff;
+    padding: 45px 35px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid #edf2f7;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card .s-icon {
+    font-size: 45px;
+    color: #011c47; /* Brand Blue */
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #011c47;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Feature List Inside Card */
+.s-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.s-list li {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.s-list li i {
+    color: #cc0000; /* Red Accent */
+    font-size: 12px;
+}
+
+/* Hover Effects */
+.service-card:hover {
+    transform: translateY(-12px);
+    background: #ffffff;
+    box-shadow: 0 25px 50px rgba(1, 28, 71, 0.1);
+    border-color: #011c47;
+}
+
+/* Active State (Middle Card Highlight) */
+.service-card.active {
+    background: #011c47;
+    border-color: #011c47;
+}
+
+.service-card.active .s-icon,
+.service-card.active h3,
+.service-card.active p,
+.service-card.active .s-list li {
+    color: #ffffff;
+}
+
+.service-card.active .s-list li i {
+    color: #ff4d4d; /* Brighter red for dark background */
+}
+
+.fortune-counter-section {
+	background-color: #011c47;
+	padding: 100px 0;
+	margin: 30px 0;
+}
+
+.counter-card {
+    padding: 40px 20px;
+    background: #f8faff;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.counter-card:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(1, 28, 71, 0.08);
+    border-bottom: 4px solid #cc0000; /* Brand Red Accent */
+}
+
+.counter-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #011c47; /* Brand Blue */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+    transition: 0.4s;
+}
+
+.counter-card:hover .counter-icon-box {
+    background: #cc0000;
+    transform: rotateY(180deg);
+}
+
+.counter-info .counter-number {
+	font-size: 35px;
+	font-weight: 700;
+	color: #011c47;
+	display: inline-block;
+	margin: 0;
+	line-height: 1;
+}
+
+.plus-sign {
+    font-size: 36px;
+    font-weight: 800;
+    color: #011c47;
+}
+
+.counter-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
