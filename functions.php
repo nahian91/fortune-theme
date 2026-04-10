@@ -135,3 +135,46 @@ add_action('wp_before_admin_bar_render', function() {
 
 // Remove default sorting dropdown
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+
+/**
+ * Fortune International Speed Optimization Snippets
+ */
+
+// 1. Remove Emoji and Block Library CSS
+add_action('init', function() {
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+});
+
+// 2. Disable Gutenberg Block Library CSS
+add_action('wp_enqueue_scripts', function() {
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+}, 100);
+
+// 3. Defer Non-Critical Scripts for faster rendering
+add_filter('script_loader_tag', function($tag, $handle) {
+    if (is_admin() || 'jquery' === $handle) {
+        return $tag;
+    }
+    return str_replace(' src', ' defer src', $tag);
+}, 10, 2);
+
+// 4. Set JPEG quality to 80% for better compression
+add_filter('jpeg_quality', function($arg) { return 80; });
+
+// 5. Remove Query Strings from Static Resources
+function fortune_remove_script_version($src) {
+    if (strpos($src, '?ver=')) {
+        $src = remove_query_arg('ver', $src);
+    }
+    return $src;
+}
+add_filter('style_loader_src', 'fortune_remove_script_version', 15, 1);
+add_filter('script_loader_src', 'fortune_remove_script_version', 15, 1);
